@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+</head>
+<body style="font-size:16px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; margin:0px;background-color:#f4f4f4;">
+<table style="max-width:600px;width:100%;" cellpadding="0" cellspacing="0" align="center">
+  <tbody style="text-align:left;">
+  <!-- Header -->
+  <tr>
+    <td style="padding-top:20px;background-color:#e4e7ca;padding-right:30px;padding-bottom:20px;padding-left:30px;border-bottom:2px solid #F3F4F4;text-align:center;">
+      <img src="https://alcpayapi.wholesomespirits.com/images/volley_1.png" style="width:170px;vertical-align: middle;" alt="volley_logo">
+    </td>
+  </tr>
+  <!-- Header -->
+  <!-- Body -->
+  <tr>
+    <td style="padding-top:30px;padding-right:20px;padding-bottom:10px;padding-left:20px;border-left:1px solid #F3F4F4;border-right:1px solid #F3F4F4;background-color:#fdfdfd;">
+      <p style="margin:0;color:#01142a;font-weight:700;font-family:'-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';font-size:18px;line-height:24px;padding-bottom:15px;">Hi <span> <%=businessName%></span> ,</p>
+      <p style="color:#202020;font-family:'-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';font-size:16px;line-height:25px;margin:0;padding-bottom:15px;">
+        Here is order information for fulfillment
+      </p>
+      <p style="color:#202020;font-family:'-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';font-size:16px;line-height:25px;margin:0;padding-bottom:15px;">
+        Order ID: <%= orderId %>
+      </p>
+      <p style="color:#202020;font-family:'-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';font-size:16px;line-height:25px;margin:0;padding-bottom:15px;">
+        <%= order %>
+      </p>
+      <p style="margin:0;color:#01142a;font-weight:700;font-family:'-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';font-size:16px;line-height:24px;padding-bottom:15px;">Shipping Address:</p>
+      <p style="color:#202020;font-family:'-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';font-size:16px;line-height:25px;margin:0;padding-bottom:15px;">
+        <%= shippingInfo.name %><br> <%= shippingInfo.address1 %><br><%= shippingInfo.city %><br><%= shippingInfo.province %><br><%= shippingInfo.zip %><br><%= shippingInfo.country_code %>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding-top:30px;padding-right:20px;padding-bottom:10px;padding-left:20px;border-left:1px solid #F3F4F4;border-right:1px solid #F3F4F4;background-color:#fdfdfd;text-align:center;">
+      <a style="margin-bottom:0px;font-family:'-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';font-size:18px;text-decoration:none;display:inline-block;width:auto;padding-top:10px;padding-right:15px;padding-bottom:10px;padding-left:15px;background-color:#565656;color:#ffffff;font-weight:700;border-radius:4px;" href="<%=trackingLink%>">Add Tracking</a>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding-right:20px;padding-bottom:30px;padding-left:20px;border-left:1px solid #F3F4F4;border-right:1px solid #F3F4F4;background-color:#fdfdfd;">
+      <p style="text-align:left;color:#01142a;font-family:'-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';font-size:16px;line-height:25px;margin:0;padding-bottom:10px;font-weight:700;">Volley Team.</p>
+    </td>
+  </tr>
+  <!-- Footer -->
+  <tr>
+    <td style="padding-top:20px;background-color:#e4e7ca;padding-right:20px;padding-bottom:20px;padding-left:20px;border-bottom:2px solid #F3F4F4;text-align:center;">
+      <table style="width:100%;" cellpadding="0" cellspacing="0" align="center">
+        <tbody style="text-align:center;">
+        <tr>
+          <td style="padding-bottom:10px;">
+            <p style="text-align:center;color:#000000;font-family:'-apple-system', BlinkMacSystemFont, 'Segoe UI',
+            Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';font-size:14px;line-height:25px;margin:0;padding-bottom:10px;padding-top:0px;font-style:italic;">
+            Copyright © <%= new Date().getFullYear() %> Wholesome Spirits, All rights reserved.</p>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+  <!-- Footer -->
+  </tbody>
+</table>
+</body>
+</html>

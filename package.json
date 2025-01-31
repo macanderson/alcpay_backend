@@ -1,0 +1,54 @@
+{
+  "name": "shopify-fulfilment",
+  "private": true,
+  "version": "0.0.0",
+  "description": "a Sails application",
+  "keywords": [],
+  "dependencies": {
+    "@sailshq/connect-redis": "^3.2.1",
+    "@sailshq/lodash": "^3.10.3",
+    "@sailshq/socket.io-redis": "^5.2.0",
+    "await-to-js": "^2.1.1",
+    "axios": "^0.19.2",
+    "bcrypt": "^5.0.0",
+    "bluebird": "^3.7.2",
+    "dotenv": "^8.2.0",
+    "grunt": "1.0.4",
+    "joi": "^17.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.27.0",
+    "node-cron": "^2.0.3",
+    "nodemailer": "^6.4.10",
+    "redis": "^3.0.2",
+    "sails": "^1.2.4",
+    "sails-hook-grunt": "^4.0.0",
+    "sails-hook-orm": "^2.1.1",
+    "sails-hook-sockets": "^2.0.0",
+    "sails-mysql": "^1.0.1",
+    "stripe": "^8.71.0"
+  },
+  "devDependencies": {
+    "eslint": "5.16.0",
+    "grunt": "^1.6.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.7"
+  },
+  "scripts": {
+    "dev1": "node app.js",
+    "dev": "nodemon app.js",
+    "start": "NODE_ENV=production node app.js",
+    "test": "npm run lint && npm run custom-tests && echo 'Done.'",
+    "lint": "./node_modules/eslint/bin/eslint.js . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
+    "custom-tests": "echo \"(No other custom tests yet.)\" && echo"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rajan/shopify-fulfilment.git"
+  },
+  "author": "rajan",
+  "license": "",
+  "engines": {
+    "node": "^12.16"
+  }
+}

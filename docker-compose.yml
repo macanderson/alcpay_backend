@@ -1,0 +1,53 @@
+version: '3'
+services:
+    mysql:
+        image: 'mysql/mysql-server:8.0'
+        ports:
+            - '3306:${DATABASE_PORT}'
+        environment:
+            MYSQL_ROOT_PASSWORD: '${DATABASE_PASSWORD}'
+            MYSQL_ROOT_HOST: '%'
+            MYSQL_DATABASE: '${DATABASE_NAME}'
+            MYSQL_USER: '${DATABASE_USERNAME}'
+            MYSQL_PASSWORD: '${DATABASE_PASSWORD}'
+            MYSQL_ALLOW_EMPTY_PASSWORD: 1
+        healthcheck:
+          test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+          timeout: 5s
+          retries: 3
+        volumes:
+            - 'mysql:/var/lib/mysql'
+        networks:
+            - baseNetwork
+    server:
+      build:
+        context: .
+        dockerfile: docker/dev/Dockerfile
+      container_name: volley-backend-api
+      depends_on:
+        mysql:
+          condition: service_healthy
+      ports:
+        - ${API_PORT}:${API_PORT}
+      networks:
+        - baseNetwork
+      volumes:
+        - .:/app
+    redis:
+      image: redis:latest
+      ports:
+        - "6379:${REDIS_PORT}"
+      volumes:
+        - redisdata:/root/redis
+      environment:
+        - REDIS_PORT=${REDIS_PORT}
+        - REDIS_PASSWORD=${REDIS_PASSWORD}
+      networks:
+        - baseNetwork
+networks:
+    baseNetwork:
+        driver: bridge
+volumes:
+    mysql:
+    dbdata:
+    redisdata:

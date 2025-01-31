@@ -1,0 +1,6 @@
+**/.tmp/**
+**/views/**
+**/assets/**
+**/.idea/**
+**/.git/**
+**temp.js**

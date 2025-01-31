@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteRule ^(.*)$ http://127.0.0.1:1337/$1 [P,L]
+RewriteRule ^$ http://127.0.0.1:1337/ [P,L]
+RewriteEngine On
+
