@@ -45,50 +45,64 @@ graph TB
 ### Key Services
 
 #### 1. Authentication Services
+
 **AuthService**
+
 - Handles user authentication and authorization
 - Manages JWT token generation and validation 
 - Integrates with BCrypt for password handling
 
 Key functions:
+
 - Login
 - Logout
 - Token validation
 
 #### 2. E-commerce Integration Services
+
 **ShopifyService**
+
 - Manages Shopify store integration
 - Handles product synchronization
 - Processes orders and fulfillment
 
 Key features:
+
 - Store configuration
 - Order management
 - Location management
 - Fulfillment processing
 
 #### 3. Payment Services
+
 **StripeService**
+
 - Manages payment processing
 - Handles account creation and linking
 - Processes transactions and payouts
 
 #### 4. Communication Services
+
 **MailService**
+
 - Handles email notifications
 - Manages email templates
 - Sends order confirmations and alerts
 
 #### 5. Utility Services
+
 **ResponseService**
+
 - Standardizes API responses
 - Handles error formatting
 
 **BCryptService**
+
 - Manages password encryption
 - Handles password validation
 
 **JwtService**
+
 - Manages JWT token operations
 - Handles token generation and validation
 
@@ -127,4 +141,3 @@ sequenceDiagram
     AuthService-->>AuthController: Return Auth Data
     AuthController-->>Client: Response with Token
 ```
-
