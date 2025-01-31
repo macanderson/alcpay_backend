@@ -176,5 +176,3 @@ const transferFunds = async (accountId, amount, metaInfo) => {
 | Stripe Transfer Failed      | StripeService      | Queue for retry, notify admin           |
 | Invalid Order Data          | OrderValidation    | Log error, notify support               |
 | Fulfillment Creation Failed | ShopifyService     | Retry with different location           |
-
-Would you like me to expand on any particular aspect of the documentation or add additional sections?
