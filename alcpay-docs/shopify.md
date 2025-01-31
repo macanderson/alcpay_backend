@@ -1,6 +1,4 @@
-// Start of Selection
 
-Based on the code analysis, I'll create an enhanced documentation focusing on the order processing flow and integrations. Here's the updated version:
 
 # Alcpay System - Integration & Order Processing Documentation
 
